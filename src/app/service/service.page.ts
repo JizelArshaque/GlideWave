@@ -1,17 +1,17 @@
-import { HttpClient , HttpHeaders } from '@angular/common/http';
-import { AfterViewInit, Component, HostListener, OnDestroy, OnInit, ViewChild } from '@angular/core';
+import {  Component,  OnInit, ViewChild } from '@angular/core';
 import { IonContent, ScrollCustomEvent } from '@ionic/angular';
 declare var $: any;
+
 @Component({
-  selector: 'app-home',
-  templateUrl: 'home.page.html',
-  styleUrls: ['home.page.scss'],
+  selector: 'app-service',
+  templateUrl: './service.page.html',
+  styleUrls: ['./service.page.scss'],
   standalone: false,
 })
-export class HomePage implements OnInit, AfterViewInit {
-  @ViewChild('content', { static: false }) content!: IonContent;
+export class ServicePage implements OnInit {
+@ViewChild('content', { static: false }) content!: IonContent;
 
-  constructor(private http: HttpClient) { }
+  constructor() { }
 
 
 
@@ -105,7 +105,6 @@ export class HomePage implements OnInit, AfterViewInit {
   }
   
 
- 
   showSearchPopup = false;
 
   toggleSearchPopup(event: Event): void {
@@ -134,25 +133,14 @@ export class HomePage implements OnInit, AfterViewInit {
   scrollToTop() {
     this.content.scrollToTop(500);
   }
-
-
-  
-
-
-openLocationInNewTab() {
-  const url = 'https://g.co/kgs/QJ6Uhan';
-  window.open(url, '_blank');
-}
-callNumber() {
-  window.location.href = 'tel:+971566844152';
-}
-sendEmail() {
-  window.location.href = 'mailto:Contact@glidewavelog.com';
-}
-
-openFaq: number | null = null;
-
-toggleFaq(faqNumber: number): void {
-  this.openFaq = this.openFaq === faqNumber ? null : faqNumber;
-}
+  openLocationInNewTab() {
+    const url = 'https://g.co/kgs/QJ6Uhan';
+    window.open(url, '_blank');
+  }
+  callNumber() {
+    window.location.href = 'tel:+971566844152';
+  }
+  sendEmail() {
+    window.location.href = 'mailto:Contact@glidewavelog.com';
+  }
 }
