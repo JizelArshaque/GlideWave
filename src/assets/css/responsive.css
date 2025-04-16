@@ -1477,11 +1477,22 @@
     .comment-content,
     .testimonial,
     .faq-section,
-    .quote-section,
     .top-footer,
     .about-section,
+    .about,
     .news-section,
-    .foot {
+    .foot,
+    .services-breadcrumb-bg,
+    .single-service,
+    .features-section,
+    .about-breadcrumb-bg,
+    .contact-breadcrumb-bg,
+    .service-details-breadcrumb-bg,
+    .service-details-section {
         padding-left: 20px;
+    }
+
+    .quote-section {
+        padding-left: 25px;
     }
 }

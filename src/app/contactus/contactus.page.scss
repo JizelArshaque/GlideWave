@@ -1,0 +1,13 @@
+/* Apply width only on screens wider than 767px */
+@media (min-width: 768px) {
+    .single-info {
+        width: 54vh;
+    }
+}
+
+/* On smaller screens, no fixed width — let it be responsive */
+@media (max-width: 767px) {
+    .single-info {
+        width: auto;
+    }
+}
