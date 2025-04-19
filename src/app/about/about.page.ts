@@ -139,4 +139,8 @@ export class AboutPage implements OnInit {
   sendEmail() {
     window.location.href = 'mailto:Contact@glidewavelog.com';
   }
+  openLocationInNewTab() {
+    const url = 'https://g.co/kgs/QJ6Uhan';
+    window.open(url, '_blank');
+  }
 }
