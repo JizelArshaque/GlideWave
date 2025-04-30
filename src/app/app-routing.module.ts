@@ -31,10 +31,10 @@ const routes: Routes = [
     path: 'service-details',
     loadChildren: () => import('./service-details/service-details.module').then(m => m.ServiceDetailsPageModule)
   },
-  // {
-  //   path: '**',
-  //   loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
-  // },
+  {
+    path: '**',
+    loadChildren: () => import('./home/home.module').then(m => m.HomePageModule)
+  },
 
 ];
 
