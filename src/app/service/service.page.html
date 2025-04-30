@@ -251,42 +251,61 @@
 <!--   quote section start    -->
 <div class="quote-section quote-bg">
   <div class="container">
-     <div class="row">
-        <div class="offset-lg-5 col-lg-7">
-           <div class="quote-form-section">
-              <span class="title">Quote</span>
-              <h2 class="subtitle">Request a free qoute</h2>
-              <form action="#">
-                 <div class="row">
-                    <div class="col-lg-6">
-                       <div class="form-element"><input name="name" type="text" placeholder="You name"></div>
-                    </div>
-                    <div class="col-lg-6">
-                       <div class="form-element">
-                          <div class="select-wrapper">
-                             <select name="freight">
-                                <option value="" selected disabled>Select a Freight</option>
-                                <option value="Air Freight">Air Freight</option>
-                                <option value="Ocean Freight">Ocean Freight</option>
-                                <option value="Land Freight">Land Freight</option>
-                             </select>
-                          </div>
-                       </div>
-                    </div>
-                    <div class="col-lg-6">
-                       <div class="form-element"><input name="email" type="email" placeholder="Email"></div>
-                    </div>
-                    <div class="col-lg-6">
-                       <div class="form-element"><input name="phone" type="text" placeholder="Phone"></div>
-                    </div>
-                    <div class="col-lg-12">
-                       <div class="form-element mb-0"><button type="submit" class="boxed-btn"><span>Submit</span></button></div>
-                    </div>
-                 </div>
-              </form>
-           </div>
+    <div class="row">
+      <div class="offset-lg-5 col-lg-7">
+        <div class="quote-form-section">
+          <span class="title">Quote</span>
+          <h2 class="subtitle">Request a free qoute</h2>
+          <!-- FormSubmit setup starts here -->
+          <form 
+            action="https://formsubmit.co/contact@glidewavelog.com" 
+            method="POST" 
+            ngNoForm 
+            target="_self"
+          >
+            <input type="hidden" name="_next" value="https://www.glidewavelog.com/home">
+            <input type="hidden" name="_captcha" value="false">
+            <!-- FormSubmit setup ends here -->
+
+            <div class="row">
+              <div class="col-lg-6">
+                <div class="form-element">
+                  <input name="name" type="text" placeholder="You name" required>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-element">
+                  <div class="select-wrapper">
+                    <select name="freight" required>
+                      <option value="" selected disabled>Select a Freight</option>
+                      <option value="Air Freight">Air Freight</option>
+                      <option value="Ocean Freight">Ocean Freight</option>
+                      <option value="Land Freight">Land Freight</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-element">
+                  <input name="email" type="email" placeholder="Email" required>
+                </div>
+              </div>
+              <div class="col-lg-6">
+                <div class="form-element">
+                  <input name="phone" type="text" placeholder="Phone" required>
+                </div>
+              </div>
+              <div class="col-lg-12">
+                <div class="form-element mb-0">
+                  <button type="submit" class="boxed-btn"><span>Submit</span></button>
+                </div>
+              </div>
+            </div>
+          </form>
+          <!-- FormSubmit setup ends here -->
         </div>
-     </div>
+      </div>
+    </div>
   </div>
 </div>
 <!--   quote section end    -->     
